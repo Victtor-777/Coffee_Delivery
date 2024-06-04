@@ -20,11 +20,23 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${({ theme }) => theme.textSizes["text-regular-m"]};
   }
 
+  body {
+    height: 1500px;
+  }
+
   button {
     cursor: pointer;
+    border: none;
+    background: none;
   }
 
   a {
     text-decoration: none;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
   }
 `;
