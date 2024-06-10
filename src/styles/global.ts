@@ -39,4 +39,8 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 70rem;
     margin: 0 auto;
   }
+
+  .shadow {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  }
 `;

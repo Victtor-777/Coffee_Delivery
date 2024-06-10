@@ -9,6 +9,24 @@ import Logo from "../../assets/Logo.svg";
 import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 
 export function Header() {
+  // const [isScrolled, setIsScrolled] = useState(false);
+
+  // useEffect(() => {
+  //   const scrollHeader = () => {
+  //     if (window.scrollY >= 50) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", scrollHeader);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", scrollHeader);
+  //   };
+  // }, []);
+
   return (
     <HeaderContainer>
       <div className="container">
