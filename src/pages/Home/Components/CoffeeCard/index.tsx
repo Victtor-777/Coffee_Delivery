@@ -3,6 +3,7 @@ import { CardFooter, CartWrapper, CoffeeCardContainer, Tags } from "./style";
 import { useEffect, useState } from "react";
 import { useTheme } from "styled-components";
 import { QuantityInput } from "../../../../Components/QuantityInput";
+import { formatMoney } from "../../../../utils/formatMoney";
 
 export interface Coffee {
   id: string;
@@ -20,6 +21,7 @@ interface CoffeeProps {
 export function CoffeeCard({ coffee }: CoffeeProps) {
   const [isItemAdded, setIsItemAdded] = useState(false);
 
+  const formattedPrice = formatMoney(coffee.price);
   const theme = useTheme();
 
   useEffect(() => {
@@ -52,7 +54,7 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
 
       <CardFooter>
         <div>
-          R$ <span>{coffee.price.toFixed(2)}</span>
+          R$ <span>{formattedPrice}</span>
         </div>
 
         <CartWrapper>
