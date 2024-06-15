@@ -4,7 +4,13 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   height: 6.5rem;
+  background: ${({ theme }) => theme.colors["base-background"]};
   padding: 0 1rem;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
   > div {
     display: flex;

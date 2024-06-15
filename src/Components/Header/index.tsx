@@ -7,28 +7,29 @@ import {
 } from "./styles";
 import Logo from "../../assets/Logo.svg";
 import { MapPin, ShoppingCart } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
 
 export function Header() {
-  // const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // useEffect(() => {
-  //   const scrollHeader = () => {
-  //     if (window.scrollY >= 50) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const scrollHeader = () => {
+      if (window.scrollY >= 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
-  //   window.addEventListener("scroll", scrollHeader);
+    window.addEventListener("scroll", scrollHeader);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", scrollHeader);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("scroll", scrollHeader);
+    };
+  }, []);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer className={`${isScrolled ? "shadow" : ""}`}>
       <div className="container">
         <LogoContainer>
           <img src={Logo} alt="Coffee Delivery Logo" />
