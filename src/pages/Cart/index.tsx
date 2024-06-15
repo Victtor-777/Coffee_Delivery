@@ -1,3 +1,10 @@
+import { OrderForm } from "./Components/OrderForm";
+import { CartContainer } from "./styles";
+
 export function CartPage() {
-  return <h1>Cart</h1>;
+  return (
+    <CartContainer className="container">
+      <OrderForm />
+    </CartContainer>
+  );
 }

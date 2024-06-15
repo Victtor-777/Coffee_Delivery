@@ -8,6 +8,7 @@ import {
 import Logo from "../../assets/Logo.svg";
 import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,18 +32,22 @@ export function Header() {
   return (
     <HeaderContainer className={`${isScrolled ? "shadow" : ""}`}>
       <div className="container">
-        <LogoContainer>
-          <img src={Logo} alt="Coffee Delivery Logo" />
-        </LogoContainer>
+        <NavLink to={"/"}>
+          <LogoContainer>
+            <img src={Logo} alt="Coffee Delivery Logo" />
+          </LogoContainer>
+        </NavLink>
 
         <CartContainer>
           <LocalButton>
             <MapPin size={22} weight="fill" />
             <span>Porto Alegre, RS</span>
           </LocalButton>
-          <CartButton>
-            <ShoppingCart size={22} weight="fill" />
-          </CartButton>
+          <NavLink to={"/cart"}>
+            <CartButton>
+              <ShoppingCart size={22} weight="fill" />
+            </CartButton>
+          </NavLink>
         </CartContainer>
       </div>
     </HeaderContainer>
