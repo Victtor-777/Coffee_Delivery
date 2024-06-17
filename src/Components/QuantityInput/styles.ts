@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const QuantityContainer = styled.div`
+interface QuantityContainerProps {
+  size?: "medium" | "small";
+}
+
+export const QuantityContainer = styled.div<QuantityContainerProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,6 +26,18 @@ export const QuantityContainer = styled.div`
       outline: none;
     }
   }
+
+  ${({ size }) =>
+    size === "medium" &&
+    css`
+      padding: 0.5rem;
+    `}
+
+  ${({ size }) =>
+    size === "small" &&
+    css`
+      padding: 0.3rem 0.5rem;
+    `}
 `;
 
 export const IconWrapper = styled.button.attrs({ type: "button" })`
