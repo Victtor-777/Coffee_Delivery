@@ -9,9 +9,12 @@ import Logo from "../../assets/Logo.svg";
 import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useCart } from "../../hooks/useCart";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const { cartQuantity } = useCart();
 
   useEffect(() => {
     const scrollHeader = () => {
@@ -45,6 +48,7 @@ export function Header() {
           </LocalButton>
           <NavLink to={"/cart"}>
             <CartButton>
+              {cartQuantity >= 1 && <span>{cartQuantity}</span>}
               <ShoppingCart size={22} weight="fill" />
             </CartButton>
           </NavLink>
