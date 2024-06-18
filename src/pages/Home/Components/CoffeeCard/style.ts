@@ -103,5 +103,9 @@ export const CartWrapper = styled.div`
     &:hover {
       background: ${({ theme }) => theme.colors["brand-purple"]};
     }
+
+    &:disabled {
+      background: ${({ theme }) => theme.colors["brand-yellow"]};
+    }
   }
 `;

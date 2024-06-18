@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "styled-components";
 import { QuantityInput } from "../../../../Components/QuantityInput";
 import { formatMoney } from "../../../../utils/formatMoney";
+import { useCart } from "../../../../hooks/useCart";
 
 export interface Coffee {
   id: string;
@@ -20,9 +21,28 @@ interface CoffeeProps {
 
 export function CoffeeCard({ coffee }: CoffeeProps) {
   const [isItemAdded, setIsItemAdded] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
   const formattedPrice = formatMoney(coffee.price);
   const theme = useTheme();
+  const { addCoffeeToCart } = useCart();
+
+  function handleAddToCart() {
+    const coffeeToAdd = {
+      ...coffee,
+      quantity,
+    };
+    addCoffeeToCart(coffeeToAdd);
+    setIsItemAdded(true);
+  }
+
+  function handleIncrease() {
+    setQuantity((state) => state + 1);
+  }
+
+  function handleDecrease() {
+    setQuantity((state) => state - 1);
+  }
 
   useEffect(() => {
     let timeout: number;
@@ -58,8 +78,12 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
         </div>
 
         <CartWrapper>
-          <QuantityInput />
-          <button disabled={isItemAdded}>
+          <QuantityInput
+            onIncrease={handleIncrease}
+            onDecrease={handleDecrease}
+            quantity={quantity}
+          />
+          <button onClick={handleAddToCart} disabled={isItemAdded}>
             {isItemAdded ? (
               <CheckFat
                 weight="fill"
