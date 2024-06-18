@@ -6,15 +6,23 @@ import {
   CoffeeCartCardContainer,
   RemoveButton,
 } from "./styles";
-import imgCoffee from "/public/images/coffees/americano.png";
+import { CartItem } from "../../../../contexts/CartContext";
+import { formatMoney } from "../../../../utils/formatMoney";
 
-export function CoffeeCartCard() {
+interface CoffeeCartCardProps {
+  coffee: CartItem;
+}
+
+export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
+  const coffeeTotal = coffee.price * coffee.quantity;
+  const formattedPrice = formatMoney(coffeeTotal);
+
   return (
     <CoffeeCartCardContainer>
       <div>
-        <img src={imgCoffee} alt="" />
+        <img src={coffee.image} alt="" />
         <div>
-          <RegularText color="subtitle">Expresso Tradicional</RegularText>
+          <RegularText color="subtitle">{coffee.title}</RegularText>
           <ActionsContainer>
             <QuantityInput size="small" />
             <RemoveButton>
@@ -25,7 +33,7 @@ export function CoffeeCartCard() {
         </div>
       </div>
 
-      <p>R$ 9.90</p>
+      <p>R$ {formattedPrice}</p>
     </CoffeeCartCardContainer>
   );
 }
