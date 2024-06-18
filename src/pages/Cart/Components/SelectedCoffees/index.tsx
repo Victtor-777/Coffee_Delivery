@@ -9,7 +9,7 @@ import {
 } from "./styles";
 
 export function SelectedCoffees() {
-  const { cartItems } = useCart();
+  const { cartItems, cartQuantity } = useCart();
 
   return (
     <SelectedCoffeesContainer>
@@ -23,7 +23,9 @@ export function SelectedCoffees() {
         })}
 
         <ConfirmationSection />
-        <ButtonContainer>Confirmar Pedido</ButtonContainer>
+        <ButtonContainer disabled={cartQuantity <= 0}>
+          Confirmar Pedido
+        </ButtonContainer>
       </DetailsContainer>
     </SelectedCoffeesContainer>
   );
