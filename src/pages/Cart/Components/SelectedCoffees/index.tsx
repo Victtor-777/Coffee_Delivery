@@ -2,14 +2,10 @@ import { TitleText } from "../../../../Components/Typography";
 import { useCart } from "../../../../hooks/useCart";
 import { CoffeeCartCard } from "../CoffeeCartCard";
 import { ConfirmationSection } from "./ConfirmationSection";
-import {
-  ButtonContainer,
-  DetailsContainer,
-  SelectedCoffeesContainer,
-} from "./styles";
+import { DetailsContainer, SelectedCoffeesContainer } from "./styles";
 
 export function SelectedCoffees() {
-  const { cartItems, cartQuantity } = useCart();
+  const { cartItems } = useCart();
 
   return (
     <SelectedCoffeesContainer>
@@ -23,9 +19,9 @@ export function SelectedCoffees() {
         })}
 
         <ConfirmationSection />
-        <ButtonContainer disabled={cartQuantity <= 0}>
+        {/* <ButtonContainer disabled={cartQuantity <= 0} type="submit">
           Confirmar Pedido
-        </ButtonContainer>
+        </ButtonContainer> */}
       </DetailsContainer>
     </SelectedCoffeesContainer>
   );

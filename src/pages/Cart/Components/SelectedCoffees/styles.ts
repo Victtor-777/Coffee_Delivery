@@ -18,7 +18,6 @@ export const ConfirmationSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin-bottom: 1.5rem;
 
   > div {
     display: flex;

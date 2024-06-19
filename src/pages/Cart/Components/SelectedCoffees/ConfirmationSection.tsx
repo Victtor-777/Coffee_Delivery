@@ -1,12 +1,12 @@
 import { RegularText } from "../../../../Components/Typography";
 import { useCart } from "../../../../hooks/useCart";
 import { formatMoney } from "../../../../utils/formatMoney";
-import { ConfirmationSectionContainer } from "./styles";
+import { ButtonContainer, ConfirmationSectionContainer } from "./styles";
 
 const DELIVERY_PRICE = 3.5;
 
 export function ConfirmationSection() {
-  const { cartItemsTotal } = useCart();
+  const { cartItemsTotal, cartQuantity } = useCart();
   const cartTotal = DELIVERY_PRICE + cartItemsTotal;
 
   const formatedDeliveryPrice = formatMoney(DELIVERY_PRICE);
@@ -31,6 +31,9 @@ export function ConfirmationSection() {
           R$ {formatedCartTotal}
         </RegularText>
       </div>
+      <ButtonContainer disabled={cartQuantity <= 0} type="submit">
+        Confirmar Pedido
+      </ButtonContainer>
     </ConfirmationSectionContainer>
   );
 }
