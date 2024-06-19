@@ -6,11 +6,11 @@ import { RegularText } from "../../../../Components/Typography";
 
 export const paymentMethods = {
   credit: {
-    label: "Cartão de Crédito",
+    label: "Cartão de crédito",
     icon: <CreditCard size={16} />,
   },
   debit: {
-    label: "Cartão de Débito",
+    label: "Cartão de débito",
     icon: <Bank size={16} />,
   },
   money: {
@@ -25,19 +25,22 @@ export function PaymentMethodOptions() {
     formState: { errors },
   } = useFormContext();
 
-  const paymentMethodError = errors.paymentMethod?.message as unknown as string;
+  const paymentMethodError = errors?.paymentMethod
+    ?.message as unknown as string;
 
   return (
     <PaymentMethodOptionsContainer>
       {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
         <PaymentMethodInput
-          icon={icon}
-          id={key}
-          label={label}
           key={label}
+          id={key}
+          icon={icon}
+          label={label}
+          value={key}
           {...register("paymentMethod")}
         />
       ))}
+
       {paymentMethodError && <RegularText>{paymentMethodError}</RegularText>}
     </PaymentMethodOptionsContainer>
   );
