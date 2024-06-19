@@ -20,15 +20,15 @@ export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
   const { changeCartItemQuantity, removeCartItem } = useCart();
 
   function handleIncrease() {
-    changeCartItemQuantity(coffee.id, "increase");
+    changeCartItemQuantity(Number(coffee.id), "increase");
   }
 
   function handleDecrease() {
-    changeCartItemQuantity(coffee.id, "decrease");
+    changeCartItemQuantity(Number(coffee.id), "decrease");
   }
 
   function handleRemove() {
-    removeCartItem(coffee.id);
+    removeCartItem(Number(coffee.id));
   }
 
   return (
