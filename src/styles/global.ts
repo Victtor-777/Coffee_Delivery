@@ -20,10 +20,6 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${({ theme }) => theme.textSizes["text-regular-m"]};
   }
 
-  body {
-    height: 1500px;
-  }
-
   button {
     cursor: pointer;
     border: none;
