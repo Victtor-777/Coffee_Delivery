@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+<p>
+  <img src="./src/assets/preview.png" width="100%" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ☕ Coffee Delivery ☕
 
-Currently, two official plugins are available:
+Coffee Delivery foi criado para resolução do desafio do curso Ignite (trilha atualizada) da Rocketseat. Essa é uma aplicação completa para uma loja de cafés que vai desde a compra ao carrinho e entrega dos produtos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Neste projeto foi aplicado diversos conhecimentos visto no módulo como: Context API, layout default, rotas, formulários com React-Hook-Form, hooks (useState e useEffect), além dos fundamentos básicos da ferramenta como a componentização.
 
-## Expanding the ESLint configuration
+O Projeto também foi desenvolvido do total zero, seguindo o layout do Figma, seguindo arrisca todos os paramentros de cores, tamanho das fontes, espaçamento e estados em que cada elemento possa assumir na aplicação, além de, ter sido incluído alguns elementos a mais a fim de enriquecer o projeto.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Veja o projeto: [Preview](https://coffee-delivery-victtor.vercel.app/)
 
-- Configure the top-level `parserOptions` property like this:
+## ⚙️ Funcionalidades
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- [x] Listagem de produtos (cafés) disponíveis para compra;
+- [x] Adicionar uma quantidade específicas de itens no carrinho;
+- [x] Aumentar ou remover a quantidade de itens no carrinho;
+- [x] Formulário para o usuário preencher o seu endereço e forma de pagamento;
+- [x] Obter o endereço pelo CEP informado e preencher os campos automaticamente;
+- [x] Exibir o total de itens no carrinho no Header;
+- [x] Exibir o valor total da soma de itens no carrinho multiplicados pelo valor;
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🚀 Tecnologias
+
+- [x] [React](https://reactjs.org/)
+- [x] [Vite](https://vitejs.dev/)
+- [x] [TypeScript](https://www.typescriptlang.org/)
+- [x] [Context API](https://pt-br.reactjs.org/docs/context.html);
+- [x] [React Router Dom](https://v5.reactrouter.com/web/guides/quick-start);
+- [x] [React Hook Form](https://react-hook-form.com/);
+- [x] [Styled-Components](https://phosphoricons.com/)
+- [x] [Zod](https://phosphoricons.com/)
+- [x] [Phosphor Icons](https://phosphoricons.com/)
+
+## 📝 Considerações
+
+Projeto extremamente completo e apesar de parecer simples não foi fácil fazer tudo funcionar perfeitamente, deu para aprender e práticar muita coisa, com certeza fortaleceu bastante o meu apreendizado;
