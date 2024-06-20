@@ -1,5 +1,5 @@
 <p>
-  <img src="./src/assets/preview.png" width="100%" />
+  <img src="./public/preview.png" width="100%" />
 </p>
 
 # ☕ Coffee Delivery ☕
