@@ -36,4 +36,4 @@ O Projeto também foi desenvolvido do total zero, seguindo o layout do Figma, se
 
 ## 📝 Considerações
 
-Projeto extremamente completo e apesar de parecer simples não foi fácil fazer tudo funcionar perfeitamente, deu para aprender e práticar muita coisa, com certeza fortaleceu bastante o meu aprendizado;
+Projeto extremamente completo e apesar de parecer simples não foi fácil fazer tudo funcionar perfeitamente, deu para aprender e praticar muita coisa, com certeza fortaleceu bastante o meu aprendizado;
