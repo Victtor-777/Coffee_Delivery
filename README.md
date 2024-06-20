@@ -8,7 +8,7 @@ Coffee Delivery foi criado para resolução do desafio do curso Ignite (trilha a
 
 Neste projeto foi aplicado diversos conhecimentos visto no módulo como: Context API, layout default, rotas, formulários com React-Hook-Form, hooks (useState e useEffect), além dos fundamentos básicos da ferramenta como a componentização.
 
-O Projeto também foi desenvolvido do total zero, seguindo o layout do Figma, seguindo arrisca todos os paramentros de cores, tamanho das fontes, espaçamento e estados em que cada elemento possa assumir na aplicação, além de, ter sido incluído alguns elementos a mais a fim de enriquecer o projeto.
+O Projeto também foi desenvolvido do total zero, seguindo o layout do Figma, seguindo arrisca todos os parâmetros de cores, tamanho das fontes, espaçamento e estados em que cada elemento possa assumir na aplicação, além de, ter sido incluído alguns elementos a mais a fim de enriquecer o projeto.
 
 - Veja o projeto: [Preview](https://coffee-delivery-victtor.vercel.app/)
 
